@@ -16,8 +16,8 @@ public class O_Shroom : MonoBehaviour
 
     public State state;
 
-    public bool test;
-
+    public bool target_reached;
+    public Vector3 target_reached_pos;
     private void OnEnable()
     {
         EventManager.onTargetSet += SetTargetPos;
@@ -27,6 +27,10 @@ public class O_Shroom : MonoBehaviour
     void Start()
     {
         target_pos = transform.position;
+
+        target_reached = false;
+        target_reached_pos = Vector3.zero;
+
         state = State.Following;
     }
     // Update is called once per frame
@@ -69,6 +73,8 @@ public class O_Shroom : MonoBehaviour
         else
         {
             speed = 0;
+            target_reached = true;
+            target_reached_pos = target_pos;
             state = State.Idle;
         }
     }
@@ -86,10 +92,25 @@ public class O_Shroom : MonoBehaviour
 
         if (distance >= 1)
         {
-            speed += acc;
-            if (speed > max_speed) speed = max_speed;
+            if (!target_reached)
+            {
+                speed += acc;
+                if (speed > max_speed) speed = max_speed;
 
-            transform.position += direction * speed;
+                transform.position += direction * speed;
+
+            } else
+            {
+                if(target_pos != target_reached_pos)
+                {
+                    target_reached = false;
+                }
+            }
+        } else
+        {
+            speed = 0;
+            target_reached = true;
+            target_reached_pos = target_pos;
         }
     }
 
@@ -105,6 +126,15 @@ public class O_Shroom : MonoBehaviour
 
             transform.position += 0.01f * dir;
 
+            O_Shroom other_shroom = collided.GetComponent<O_Shroom>();
+            if (other_shroom.target_reached)
+            {
+                if(target_pos == other_shroom.target_pos)
+                {
+                    target_reached = true;
+                    target_reached_pos = target_pos;
+                }
+            }
         }
     }
     void SetTargetPos()
