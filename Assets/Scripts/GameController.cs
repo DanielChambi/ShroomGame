@@ -5,6 +5,8 @@ using UnityEngine;
 public class GameController : MonoBehaviour
 {
     public Vector3 target = Vector3.zero;
+    
+    
 
     void Start()
     {
