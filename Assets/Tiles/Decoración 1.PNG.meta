@@ -1,0 +1,690 @@
+fileFormatVersion: 2
+guid: d0dd98c7bfed35447b9e65ea409af79b
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "Decoraci\xF3n 1_0"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1
+        width: 586
+        height: 1932
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b730daa8c45ac67449b853a23c002f36
+      internalID: -531104220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Decoraci\xF3n 1_1"
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 1896
+        width: 71
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbe53d91acdc7484d9c2792b67fb12a2
+      internalID: -689101311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Decoraci\xF3n 1_2"
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 1797
+        width: 298
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68e225a3056e5974383f137ead952865
+      internalID: 1051551899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Decoraci\xF3n 1_3"
+      rect:
+        serializedVersion: 2
+        x: 1243
+        y: 879
+        width: 1239
+        height: 1056
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 811c9c27de1db2d4c9218ad61c39cccf
+      internalID: 795506472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Decoraci\xF3n 1_4"
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 1803
+        width: 84
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e21160ac64bf12240bd8180d1d263bc8
+      internalID: 1009328177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Decoraci\xF3n 1_5"
+      rect:
+        serializedVersion: 2
+        x: 947
+        y: 1741
+        width: 269
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fcd1276d64a07049ab7b20dbc331ca3
+      internalID: 2075234448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Decoraci\xF3n 1_6"
+      rect:
+        serializedVersion: 2
+        x: 632
+        y: 1535
+        width: 264
+        height: 185
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa24ecc22b199ba4fac33edd82fb8615
+      internalID: 1271601115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Decoraci\xF3n 1_7"
+      rect:
+        serializedVersion: 2
+        x: 940
+        y: 1524
+        width: 210
+        height: 167
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5ceee5245765c8459b25eeabd2139a5
+      internalID: 330308151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Decoraci\xF3n 1_8"
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 1291
+        width: 269
+        height: 193
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fadcb1d094645b4381f15e47b5ee00d
+      internalID: -861749093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Decoraci\xF3n 1_9"
+      rect:
+        serializedVersion: 2
+        x: 981
+        y: 1331
+        width: 155
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c86e939c8a295df478cf2b15bdb3123c
+      internalID: 1332771612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Decoraci\xF3n 1_10"
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 855
+        width: 570
+        height: 432
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a18980e354015764e873ef5ee97339cc
+      internalID: 1444182783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Decoraci\xF3n 1_11"
+      rect:
+        serializedVersion: 2
+        x: 1285
+        y: 328
+        width: 997
+        height: 528
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb6dc11385405db4081ae08ed390fc7a
+      internalID: 44439426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Decoraci\xF3n 1_12"
+      rect:
+        serializedVersion: 2
+        x: 2296
+        y: 343
+        width: 183
+        height: 535
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51c698595894a5e4aa83c60318ffba6c
+      internalID: 1581206103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Decoraci\xF3n 1_13"
+      rect:
+        serializedVersion: 2
+        x: 638
+        y: 576
+        width: 412
+        height: 225
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2848ee8c2cef49940bf5d6d619daba40
+      internalID: 878693305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Decoraci\xF3n 1_14"
+      rect:
+        serializedVersion: 2
+        x: 1064
+        y: 609
+        width: 177
+        height: 244
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7831569d195e1134182601e14ee74153
+      internalID: -1389891453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Decoraci\xF3n 1_15"
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 348
+        width: 520
+        height: 188
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2c0c52335f278c48a828e4feef6fba0
+      internalID: 1180759772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Decoraci\xF3n 1_16"
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 63
+        width: 269
+        height: 201
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d76a52a792b9ce41bb2e9b25437d97c
+      internalID: 1687093745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Decoraci\xF3n 1_17"
+      rect:
+        serializedVersion: 2
+        x: 908
+        y: 16
+        width: 329
+        height: 322
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6af84b5fbb349fb438cef0be0c05fc44
+      internalID: 2033658474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Decoraci\xF3n 1_18"
+      rect:
+        serializedVersion: 2
+        x: 1334
+        y: 12
+        width: 239
+        height: 303
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5afd7e0a7f48f84f81a44c0442b9430
+      internalID: 134417503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Decoraci\xF3n 1_19"
+      rect:
+        serializedVersion: 2
+        x: 1625
+        y: 204
+        width: 84
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12b9e5a6b7e513d42a3551ffa012662f
+      internalID: -2134265402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Decoraci\xF3n 1_20"
+      rect:
+        serializedVersion: 2
+        x: 1719
+        y: 158
+        width: 130
+        height: 109
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5db5a94d96e13d84aa38ecd0d78b8f5c
+      internalID: -2057497929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Decoraci\xF3n 1_21"
+      rect:
+        serializedVersion: 2
+        x: 1940
+        y: 170
+        width: 103
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 513e89344b3947a48be88c516ebe5cfa
+      internalID: 581069923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Decoraci\xF3n 1_22"
+      rect:
+        serializedVersion: 2
+        x: 2188
+        y: 6
+        width: 222
+        height: 319
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd1ba60f314c75440bca043b35c4b7a9
+      internalID: -1114764305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Decoraci\xF3n 1_23"
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 69
+        width: 232
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dae5a4d378cd69c4e9d536c3338ecfb6
+      internalID: -1627387909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Decoraci\xF3n 1_24"
+      rect:
+        serializedVersion: 2
+        x: 2019
+        y: 106
+        width: 72
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1931c9b3f8443d45b1850557fb88493
+      internalID: 252302873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      "Decoraci\xF3n 1_0": -531104220
+      "Decoraci\xF3n 1_1": -689101311
+      "Decoraci\xF3n 1_10": 1444182783
+      "Decoraci\xF3n 1_11": 44439426
+      "Decoraci\xF3n 1_12": 1581206103
+      "Decoraci\xF3n 1_13": 878693305
+      "Decoraci\xF3n 1_14": -1389891453
+      "Decoraci\xF3n 1_15": 1180759772
+      "Decoraci\xF3n 1_16": 1687093745
+      "Decoraci\xF3n 1_17": 2033658474
+      "Decoraci\xF3n 1_18": 134417503
+      "Decoraci\xF3n 1_19": -2134265402
+      "Decoraci\xF3n 1_2": 1051551899
+      "Decoraci\xF3n 1_20": -2057497929
+      "Decoraci\xF3n 1_21": 581069923
+      "Decoraci\xF3n 1_22": -1114764305
+      "Decoraci\xF3n 1_23": -1627387909
+      "Decoraci\xF3n 1_24": 252302873
+      "Decoraci\xF3n 1_3": 795506472
+      "Decoraci\xF3n 1_4": 1009328177
+      "Decoraci\xF3n 1_5": 2075234448
+      "Decoraci\xF3n 1_6": 1271601115
+      "Decoraci\xF3n 1_7": 330308151
+      "Decoraci\xF3n 1_8": -861749093
+      "Decoraci\xF3n 1_9": 1332771612
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
