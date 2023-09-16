@@ -34,4 +34,22 @@ public class ShroomController : MonoBehaviour
 
         shrooms.Add(new_shroom);
     }
+
+    public bool ThrowShroom()
+    {
+        int index = 0;
+        bool thrown = false;
+        while(index < shrooms.Count && !thrown)
+        {
+            O_Shroom s = shrooms[index];
+            if(s.state == O_Shroom.State.Following)
+            {
+                s.SetThrown();
+                thrown = true;
+            }
+            index++;
+        }
+
+        return thrown;
+    }
 }

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3581244101865791081}
   - component: {fileID: 7451974475909359415}
   - component: {fileID: 2257776963646744250}
+  - component: {fileID: -4819194408335592455}
   m_Layer: 0
   m_Name: O_Player
   m_TagString: Untagged
@@ -105,3 +106,44 @@ MonoBehaviour:
   speed: {x: 0, y: 0, z: 0}
   direction: {x: 0, y: 0, z: 0}
   looking_direction: {x: 0, y: 0, z: 0}
+  pointing_direction: {x: 0, y: 0, z: 0}
+  pointing_arrow: {fileID: 0}
+  arrow_distance: 2
+  arrow_curr_distance: 0
+  throw_distance: 5
+  shroom_controller: {fileID: 0}
+--- !u!58 &-4819194408335592455
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8469141209353619623}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.21133333}
+  serializedVersion: 2
+  m_Radius: 0.5

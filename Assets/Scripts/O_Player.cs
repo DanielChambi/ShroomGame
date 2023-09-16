@@ -16,8 +16,13 @@ public class O_Player : MonoBehaviour
     public Vector3 pointing_direction;
 
     public Transform pointing_arrow;
-    public float arrow_distance;
+    public float arrow_distance = 2;
     public float arrow_curr_distance;
+
+    public float throw_distance = 5;
+
+    public ShroomController shroom_controller;
+
     void Start()
     {
         looking_direction = Vector3.right;
@@ -43,6 +48,14 @@ public class O_Player : MonoBehaviour
 
         float angle = Mathf.Atan2(pointing_direction.y, pointing_direction.x) * Mathf.Rad2Deg;
         pointing_arrow.rotation = Quaternion.AngleAxis(angle - 90, Vector3.forward);
+
+
+        //throw shroom
+
+        if (Input.GetButtonDown("Jump"))
+        {
+            shroom_controller.ThrowShroom();
+        }
 
     }
 

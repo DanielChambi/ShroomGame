@@ -5,8 +5,11 @@ using UnityEngine;
 public class O_Shroom : MonoBehaviour
 {
     public float speed = 0;
-    public float max_speed = 0.04f;
+    public float max_speed_walk = 0.04f;
+    public float max_speed_throw = 0.09f;
     public float acc = 0.002f;
+
+    public float trail_player_dis = 3;
 
     public GameController controller;
     public O_Player player;
@@ -16,8 +19,10 @@ public class O_Shroom : MonoBehaviour
 
     public State state;
 
-    public bool target_reached;
+    public bool target_reached = false;
     public Vector3 target_reached_pos;
+
+    public bool thrown_positioned = false;
     private void OnEnable()
     {
         EventManager.onTargetSet += SetTargetPos;
@@ -28,7 +33,6 @@ public class O_Shroom : MonoBehaviour
     {
         target_pos = transform.position;
 
-        target_reached = false;
         target_reached_pos = Vector3.zero;
 
         state = State.Following;
@@ -47,6 +51,9 @@ public class O_Shroom : MonoBehaviour
             case State.Following:
                 FollowingUpdate();
                 break;
+            case State.Thrown:
+                ThrownUpdate();
+                break;
             default:
                 break;
         }
@@ -61,12 +68,12 @@ public class O_Shroom : MonoBehaviour
     {
         Vector3 route = target_pos - transform.position;
         direction = route.normalized;
-        float distance = route.magnitude;
+        float distance = route.sqrMagnitude;
 
         if (distance >= 1)
         {
             speed += acc;
-            if (speed > max_speed) speed = max_speed;
+            if (speed > max_speed_walk) speed = max_speed_walk;
 
             transform.position = transform.position + direction * speed;
         }
@@ -83,19 +90,19 @@ public class O_Shroom : MonoBehaviour
     {
         Vector3 player_pos = player.transform.position;
         //trail behind
-        target_pos = player_pos - player.looking_direction * 4f;
+        target_pos = player_pos - player.looking_direction * trail_player_dis;
 
 
         Vector3 route = target_pos - transform.position;
         direction = route.normalized;
-        float distance = route.magnitude;
+        float distance = route.sqrMagnitude;
 
         if (distance >= 1)
         {
             if (!target_reached)
             {
                 speed += acc;
-                if (speed > max_speed) speed = max_speed;
+                if (speed > max_speed_walk) speed = max_speed_walk;
 
                 transform.position += direction * speed;
 
@@ -112,6 +119,61 @@ public class O_Shroom : MonoBehaviour
             target_reached = true;
             target_reached_pos = target_pos;
         }
+    }
+
+    void ThrownUpdate()
+    {
+        Vector3 route = target_pos - transform.position;
+        direction = route.normalized;
+        float distance = route.sqrMagnitude;
+
+        if(distance >= 1)
+        {
+            speed += acc;
+            if (speed > max_speed_throw) speed = max_speed_throw;
+
+            transform.position += direction * speed;
+        } else
+        {
+            if (!thrown_positioned)
+            {
+                thrown_positioned = true;
+                target_pos = player.transform.position + player.pointing_direction * player.throw_distance;
+            } else
+            {
+                //search interactive obj
+                //if none:
+                SetIdle();
+            }
+        }
+    }
+
+    public void SetThrown()
+    {
+        state = State.Thrown;
+        target_pos = player.transform.position + player.pointing_direction * player.arrow_distance;
+        thrown_positioned = false;
+    }
+
+    public void SetFollowing()
+    {
+        state = State.Following;
+        target_reached = false;
+    }
+
+    public void SetIdle()
+    {
+        state = State.Idle;
+    }
+
+    void SetTargetPos()
+    {
+        if (state == State.Idle)
+        {
+            target_pos = controller.target;
+            state = State.OnTheWay;
+        }
+
     }
 
 
@@ -137,14 +199,17 @@ public class O_Shroom : MonoBehaviour
             }
         }
     }
-    void SetTargetPos()
-    {
-        if (state == State.Idle)
-        {
-            target_pos = controller.target;
-            state = State.OnTheWay;
-        }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Transform collided = collision.transform;
+        if(collided.tag == "Player")
+        {
+            if (state == State.Idle)
+            {
+                SetFollowing();
+            }
+        }
     }
 
     private void OnDisable()
@@ -156,6 +221,7 @@ public class O_Shroom : MonoBehaviour
     {
         Idle,
         OnTheWay,
-        Following
+        Following,
+        Thrown
     }
 }
