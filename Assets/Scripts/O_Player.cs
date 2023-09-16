@@ -13,13 +13,40 @@ public class O_Player : MonoBehaviour
     public Vector3 speed;
     public Vector3 direction;
     public Vector3 looking_direction;
+    public Vector3 pointing_direction;
 
+    public Transform pointing_arrow;
+    public float arrow_distance;
+    public float arrow_curr_distance;
     void Start()
     {
         looking_direction = Vector3.right;
+        pointing_direction = Vector3.right;
     }
 
     void Update()
+    {
+        //move character
+
+        Movement();
+
+
+        //update pointing direction
+
+        Vector3 mouse_pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        mouse_pos.z = 0;
+        pointing_direction = mouse_pos - transform.position;
+        float pointing_dis = pointing_direction.magnitude;
+        pointing_direction = pointing_direction / pointing_dis;
+
+        pointing_arrow.position = transform.position + pointing_direction * arrow_distance;
+
+        float angle = Mathf.Atan2(pointing_direction.y, pointing_direction.x) * Mathf.Rad2Deg;
+        pointing_arrow.rotation = Quaternion.AngleAxis(angle - 90, Vector3.forward);
+
+    }
+
+    void Movement()
     {
 
         float h_dir = Input.GetAxis("Horizontal");
@@ -62,6 +89,5 @@ public class O_Player : MonoBehaviour
 
         spd = speed.magnitude;
         transform.position += speed;
-
     }
 }
