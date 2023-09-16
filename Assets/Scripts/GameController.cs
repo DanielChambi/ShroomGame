@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
+    public GameObject player;
     public Vector3 target = Vector3.zero;
 
     public Path MapPath;
