@@ -23,6 +23,11 @@ public class O_Shroom : MonoBehaviour
     public Vector3 target_reached_pos;
 
     public bool thrown_positioned = false;
+
+    public O_Obstacle curr_obstacle;
+    public float work_cooldown = 1;
+    public float work_timer = 0;
+
     private void OnEnable()
     {
         EventManager.onTargetSet += SetTargetPos;
@@ -53,6 +58,9 @@ public class O_Shroom : MonoBehaviour
                 break;
             case State.Thrown:
                 ThrownUpdate();
+                break;
+            case State.Working:
+                WorkingUpdate();
                 break;
             default:
                 break;
@@ -148,6 +156,22 @@ public class O_Shroom : MonoBehaviour
         }
     }
 
+    void WorkingUpdate()
+    {
+        if(curr_obstacle != null)
+        {
+            work_timer += Time.deltaTime;
+            if (work_timer >= work_cooldown)
+            {
+                curr_obstacle.DealDamage(1);
+                work_timer = 0;
+            }
+        } else
+        {
+            FinishWork();
+        }
+    }
+
     public void SetThrown()
     {
         state = State.Thrown;
@@ -164,6 +188,23 @@ public class O_Shroom : MonoBehaviour
     public void SetIdle()
     {
         state = State.Idle;
+    }
+
+    public void SetWorking(O_Obstacle obstacle)
+    {
+        curr_obstacle = obstacle;
+        curr_obstacle.AddWorkingShroom(this);
+        state = State.Working;
+    }
+
+    public void FinishWork()
+    {
+        if(state == State.Working)
+        {
+            curr_obstacle = null;
+            work_timer = 0;
+            SetIdle();
+        }
     }
 
     void SetTargetPos()
@@ -210,6 +251,13 @@ public class O_Shroom : MonoBehaviour
                 SetFollowing();
             }
         }
+        if(collided.tag == "Obstacle")
+        {
+            if(state == State.Thrown)
+            {
+                SetWorking(collided.GetComponent<O_Obstacle>());
+            }
+        }
     }
 
     private void OnDisable()
@@ -222,6 +270,7 @@ public class O_Shroom : MonoBehaviour
         Idle,
         OnTheWay,
         Following,
-        Thrown
+        Thrown,
+        Working
     }
 }
