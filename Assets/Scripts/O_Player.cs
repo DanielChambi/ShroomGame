@@ -23,11 +23,15 @@ public class O_Player : MonoBehaviour
 
     public ShroomController shroom_controller;
 
+    private Animator animator; 
+
     void Start()
     {
+        animator = GetComponent<Animator>();
         looking_direction = Vector3.right;
         pointing_direction = Vector3.right;
     }
+
 
     void Update()
     {
@@ -59,6 +63,8 @@ public class O_Player : MonoBehaviour
 
     }
 
+
+
     void Movement()
     {
 
@@ -86,6 +92,10 @@ public class O_Player : MonoBehaviour
 
             float angle = Mathf.Atan2(looking_direction.y, looking_direction.x) * Mathf.Rad2Deg;
             transform.rotation = Quaternion.AngleAxis(angle + 30, Vector3.forward);
+
+            // animator
+
+            animator.SetBool("Run", true);
         }
         else
         {
@@ -98,9 +108,15 @@ public class O_Player : MonoBehaviour
             {
                 speed = Vector3.zero;
             }
+
+            //animator
+
+            animator.SetBool("Run", false);
         }
 
         spd = speed.magnitude;
         transform.position += speed;
+
+        
     }
 }
